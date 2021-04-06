@@ -53,5 +53,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     kapt "com.android.databinding:compiler:3.4.1"
-    implementation project(path: ':library')
+    implementation 'com.github.CASH-IT-Developer:FlickShowCase:1.0'
+//    implementation project(path: ':library')
 }

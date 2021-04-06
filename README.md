@@ -17,6 +17,12 @@
       }
     
    add in build.gradle module
+   
+       // enabling data binding how to use this library
+       
+       dataBinding {
+               enabled = true
+           }
     
     dependencies {
         ...
