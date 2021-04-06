@@ -1,6 +1,6 @@
 # FlickShowCase
 
-![alt text](https://raw.githubusercontent.com/vickyKDV/FloatingButtonDrag/master/mygif.gif)
+![alt text](https://raw.githubusercontent.com/CASH-IT-Developer/FlickShowCase/main/ss1.jpeg)
 
    How to implementation
    
