@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="popupBackgroundFlickShowCase">#FACA00</color>
+    <color name="colorInfoPopupBorderFlickShowCase">#c4d7ef</color>
+    <color name="blackFlickShowCase">#000000</color>
+    <color name="whiteFlickShowCase">#ffffff</color>
+    <color name="textTitleColorFlickShowCase">#262626</color>
+    <color name="textDescriptionColorFlickShowCase">#262626</color>
+    <color name="buttonColorFlickShowCase">#FFE370</color>
+    <color name="closeButtonColorFlickShowCase">#262626</color>
+</resources>

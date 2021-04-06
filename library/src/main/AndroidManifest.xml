@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.flick.showcase">
+
+    <!-- to display showcaseview, this activity and its' style must be added -->
+    <application>
+        <activity
+            android:name="com.flick.showcase.ui.showcase.ShowcaseActivity"
+            android:theme="@style/ShowcaseTransparentTheme" />
+    </application>
+
+</manifest>
