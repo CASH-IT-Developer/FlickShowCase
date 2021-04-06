@@ -1,5 +1,5 @@
 # FlickShowCase
-
+[![](https://jitpack.io/v/CASH-IT-Developer/FlickShowCase.svg)](https://jitpack.io/#CASH-IT-Developer/FlickShowCase)
 ![alt text](https://raw.githubusercontent.com/CASH-IT-Developer/FlickShowCase/main/ss1.jpeg)
 
    How to implementation
@@ -21,7 +21,7 @@
     dependencies {
         ...
         ...
-        implementation 'com.github.vickykdv:FloatingButtonDrag:1.0'
+        implementation 'com.github.CASH-IT-Developer:FlickShowCase:Tag'
     }
     
     
