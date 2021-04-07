@@ -19,6 +19,7 @@ import com.flick.showcase.ui.tooltip.ArrowPosition
 import com.flick.showcase.util.Constants
 import com.flick.showcase.util.TooltipFieldUtil
 import com.flick.showcase.util.toRectF
+import com.pixplicity.easyprefs.library.Prefs
 
 data class FlickShowCase private constructor(
     private val showcaseModel: ShowcaseModel,
@@ -26,21 +27,33 @@ data class FlickShowCase private constructor(
 ) {
 
     fun showing(
+        showcaseName:String? = null,
         activity: Activity,
         requestCode: Int? = null
     ) {
         val intent = Intent(activity, ShowcaseActivity::class.java)
         val model = if (resId != null) readFromStyle(activity, resId) else showcaseModel
         intent.putExtra(ShowcaseActivity.BUNDLE_KEY, model)
-
-        if (requestCode == null) {
-            activity.startActivity(intent)
-        } else {
-            activity.startActivityForResult(intent, requestCode)
+        if(showcaseName != null) {
+            if (!Prefs.getBoolean(showcaseName, false)) {
+                if (requestCode == null) {
+                    activity.startActivity(intent)
+                } else {
+                    activity.startActivityForResult(intent, requestCode)
+                }
+                Prefs.putBoolean(showcaseName, true)
+            }
+        }else{
+            if (requestCode == null) {
+                activity.startActivity(intent)
+            } else {
+                activity.startActivityForResult(intent, requestCode)
+            }
         }
     }
 
     fun showing(
+        showcaseName:String? = null,
         fragment: Fragment,
         requestCode: Int? = null
     ) {
@@ -48,10 +61,21 @@ data class FlickShowCase private constructor(
             val intent = Intent(activity, ShowcaseActivity::class.java)
             val model = if (resId != null) readFromStyle(activity, resId) else showcaseModel
             intent.putExtra(ShowcaseActivity.BUNDLE_KEY, model)
-            if (requestCode == null) {
-                fragment.startActivity(intent)
-            } else {
-                fragment.startActivityForResult(intent, requestCode)
+            if (showcaseName != null) {
+                if (!Prefs.getBoolean(showcaseName, false)) {
+                    if (requestCode == null) {
+                        fragment.startActivity(intent)
+                    } else {
+                        fragment.startActivityForResult(intent, requestCode)
+                    }
+                    Prefs.putBoolean(showcaseName, true)
+                }
+            }else{
+                if (requestCode == null) {
+                    fragment.startActivity(intent)
+                } else {
+                    fragment.startActivityForResult(intent, requestCode)
+                }
             }
         }
     }

@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 .highlightType(HighlightType.CIRCLE)
                 .windowBackgroundAlpha(90)
                 .created()
-                .showing(this@MainActivity, 0)
+                .showing(activity = this@MainActivity)
         }
 
 

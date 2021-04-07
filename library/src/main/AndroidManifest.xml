@@ -2,7 +2,9 @@
     package="com.flick.showcase">
 
     <!-- to display showcaseview, this activity and its' style must be added -->
-    <application>
+
+    <application
+        android:name=".MyShowCaseApp">
         <activity
             android:name="com.flick.showcase.ui.showcase.ShowcaseActivity"
             android:theme="@style/ShowcaseTransparentTheme" />
