@@ -1,9 +1,9 @@
 package com.lesehankoding.showcaseexample
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import com.flick.showcase.showcase.FlickShowCase
 import com.flick.showcase.ui.showcase.HighlightType
 import com.flick.showcase.ui.tooltip.ArrowPosition
@@ -18,13 +18,13 @@ class MainActivity : AppCompatActivity() {
         buttonTop.setOnClickListener {
             FlickShowCase.Create()
                 .view(buttonTop)
-//                .titleText("Title For Top!")
-                .descriptionText("Simple, short description for top tooltip.")
+                .titleText("This is Title!")
+                .descriptionText("This is description.")
                 .buttonText("Tutup")
                 .showOkeButton(true)
                 .cancellableFromOutsideTouch(false)
                 .arrowPosition(ArrowPosition.TOP)
-                .highlightType(HighlightType.NONE)
+                .highlightType(HighlightType.CIRCLE)
                 .windowBackgroundAlpha(90)
                 .created()
                 .showing(this@MainActivity, 0)

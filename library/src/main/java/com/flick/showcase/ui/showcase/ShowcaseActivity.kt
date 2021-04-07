@@ -22,7 +22,9 @@ class ShowcaseActivity : AppCompatActivity() {
         }
     }
 
-    fun onBackPress(isHighlightClicked: Boolean = false) {
+    fun onBackPress(
+        isHighlightClicked: Boolean = false,
+        ) {
         setResult(Activity.RESULT_OK, Intent().putExtra(FlickShowCase.HIGHLIGHT_CLICKED, isHighlightClicked))
         finish()
         overridePendingTransition(0, android.R.anim.fade_out)

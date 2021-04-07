@@ -52,10 +52,17 @@
                      .highlightType(HighlightType.NONE)
                      .windowBackgroundAlpha(90)
                      .created()
-                     .showing(this@MainActivity, 0)
+                     .showing(this@MainActivity, 100)
              }
      
      
          }
      }
+     
+     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+             super.onActivityResult(requestCode, resultCode, data)
+             if(resultCode == RESULT_OK && requestCode == 100){
+                 showToast("Tooltip ok")
+             }
+         }
 

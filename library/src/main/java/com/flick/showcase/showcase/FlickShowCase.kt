@@ -25,7 +25,10 @@ data class FlickShowCase private constructor(
     @StyleRes val resId: Int?
 ) {
 
-    fun showing(activity: Activity, requestCode: Int? = null) {
+    fun showing(
+        activity: Activity,
+        requestCode: Int? = null
+    ) {
         val intent = Intent(activity, ShowcaseActivity::class.java)
         val model = if (resId != null) readFromStyle(activity, resId) else showcaseModel
         intent.putExtra(ShowcaseActivity.BUNDLE_KEY, model)
@@ -37,12 +40,14 @@ data class FlickShowCase private constructor(
         }
     }
 
-    fun showing(fragment: Fragment, requestCode: Int? = null) {
+    fun showing(
+        fragment: Fragment,
+        requestCode: Int? = null
+    ) {
         fragment.activity?.let { activity ->
             val intent = Intent(activity, ShowcaseActivity::class.java)
             val model = if (resId != null) readFromStyle(activity, resId) else showcaseModel
             intent.putExtra(ShowcaseActivity.BUNDLE_KEY, model)
-
             if (requestCode == null) {
                 fragment.startActivity(intent)
             } else {

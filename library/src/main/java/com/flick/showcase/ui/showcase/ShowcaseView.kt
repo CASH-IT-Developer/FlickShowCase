@@ -68,8 +68,10 @@ class ShowcaseView @JvmOverloads constructor(context: Context, attrs: AttributeS
         onTouchClickListener.clickListener = { _, x, y ->
             if (showcaseModel?.cancellableFromOutsideTouch == true) {
                 getShowcaseActivity()?.onBackPress(isHighlightClick(x, y))
+
             } else if (isHighlightClick(x, y)) {
                 getShowcaseActivity()?.onBackPress(true)
+
             }
         }
 
@@ -97,7 +99,9 @@ class ShowcaseView @JvmOverloads constructor(context: Context, attrs: AttributeS
             newRectF.contains(x, y)
         } ?: false
 
-    private fun bind(showcaseModel: ShowcaseModel?) {
+    private fun bind(
+        showcaseModel: ShowcaseModel?
+    ) {
         showcaseModel?.let {
             listenClickEvents()
 
