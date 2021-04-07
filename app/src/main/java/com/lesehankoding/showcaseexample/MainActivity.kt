@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 .highlightType(HighlightType.CIRCLE)
                 .windowBackgroundAlpha(90)
                 .created()
-                .showing(activity = this@MainActivity)
+                .showing(showcaseName = "Button2",activity = this@MainActivity)
         }
 
 
